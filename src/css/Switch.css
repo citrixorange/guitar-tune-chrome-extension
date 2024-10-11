@@ -1,0 +1,43 @@
+.switch {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.switch-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 285px;
+}
+
+.left-switch {
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.right-switch {
+    margin-top: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.switch-display {
+    height: 64px;
+    width: 231px;
+    font-family: 'Mina';
+    font-size: 24px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    cursor: default;
+}

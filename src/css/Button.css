@@ -1,0 +1,65 @@
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 44px;
+    margin-bottom: 20px;
+}
+
+.button {
+    height: 64px;
+    width: 231px;
+    font-family: 'Mina';
+    font-size: 24px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    border: 2px solid #b98dc9;
+    animation: snake-border 1.5s forwards;
+}
+
+.config-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Snake effect on hover */
+@keyframes snake-border {
+    0% {
+        border-top-color: #b98dc9;
+    }
+    15% {
+        border-top-color: #e8a5ff;
+        border-right-color:  #b98dc9;
+    }
+    30% {
+        border-right-color:  #e8a5ff;
+        border-bottom-color: #b98dc9;
+    }
+    45% {
+        border-bottom-color: #e8a5ff;
+        border-left-color: #b98dc9;
+    }
+    60% {
+        border-top-color: #b98dc9;
+    }
+    75% {
+        border-right-color: #b98dc9;
+    }
+    90% {
+        border-bottom-color: #b98dc9;
+    }
+}

@@ -1,0 +1,48 @@
+
+
+.description {
+    font-family: 'Manjari';
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 60px;
+    margin-left: 27px;
+    margin-right: 27px;
+    margin-bottom: 60px;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.version {
+    font-family: 'Manjari';
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 135px;
+    margin-bottom: 135px;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.highlight-word-top {
+    color: #E8A5FF;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.highlight-word-bottom {
+    color: #9780DE;
+    cursor: pointer;
+}
