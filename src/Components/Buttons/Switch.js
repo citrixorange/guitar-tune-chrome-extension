@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { RightSwitch } from './RightSwitch';
 import { LeftSwitch } from './LeftSwitch';
-import { Div, Button } from '../../Base';
 import '../../css/Switch.css';
 
 const Switch = ({ description, options }) => {
@@ -14,13 +13,13 @@ const Switch = ({ description, options }) => {
     }, [option, idx]);
 
     return (
-        <Div className='switch'>
+        <div className='switch'>
             <LeftSwitch setOption={setOption} idx={idx} setIdx={setIdx} options={options}/>
-            <Button className='switch-display' disabled={true}>
+            <button className='switch-display' disabled={true}>
                 {option}
-            </Button>
+            </button>
             <RightSwitch setOption={setOption} idx={idx} setIdx={setIdx} options={options}/>
-        </Div>
+        </div>
     );
 };
   

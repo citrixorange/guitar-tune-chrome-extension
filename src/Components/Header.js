@@ -4,32 +4,31 @@ import {
     Close,
     Back
 } from './Buttons';
-import { Div } from '../Base';
 
 import '../css/Header.css';
 
 const Header = ({ icon, stateManager, setState }) => {
     if (icon == 'hamburguer') {
         return (
-            <Div className='header-main'>
+            <div className='header-main'>
                 <Hamburguer stateManager={stateManager} setState={setState}/>
-            </Div>
+            </div>
         );
     } else if (icon == 'back') {
         return (
-            <Div className='header-menu'>
+            <div className='header-menu'>
                 <Back stateManager={stateManager} setState={setState}/>
-            </Div>
+            </div>
         );
     } else if (icon == 'close') {
         return (
-            <Div className='header-menu'>
+            <div className='header-menu'>
                 <Close stateManager={stateManager} setState={setState}/>
-            </Div>
+            </div>
         );
     } else {
         return (
-            <Div className='header'/>
+            <div className='header'/>
         );
     }
 };

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Div, Img } from '../../Base';
 import right from '../../../images/assets/right.png';
 import hovered from '../../../images/assets/hovered-right.png';
 import '../../css/Switch.css';
@@ -14,7 +13,7 @@ const RightSwitch = ({setOption, idx, setIdx, options}) => {
 
     if (isFirstClick) {
         return (
-            <Div 
+            <div 
                 className='right-switch'
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
@@ -23,12 +22,12 @@ const RightSwitch = ({setOption, idx, setIdx, options}) => {
                     setFirstClick(false)
                 }}
             >   
-                <Img src={isHovered ? hovered : right}/>
-            </Div>
+                <img src={isHovered ? hovered : right}/>
+            </div>
         );
     } else {
         return (
-            <Div 
+            <div 
                 className='right-switch'
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
@@ -42,8 +41,8 @@ const RightSwitch = ({setOption, idx, setIdx, options}) => {
                     }
                 }}
             >   
-                <Img src={isHovered ? hovered : right}/>
-            </Div>
+                <img src={isHovered ? hovered : right}/>
+            </div>
         );
     }
 };

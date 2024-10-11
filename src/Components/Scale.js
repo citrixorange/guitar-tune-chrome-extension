@@ -92,7 +92,6 @@
         scale_44p,
         scale_45p,
     } from './Scales';
-    import { Div, Img } from '../Base';
     import '../css/Tuner.css';
 
     const Scale = ({ degree }) => {
@@ -122,9 +121,9 @@
         const scaleImage = scales[degree+45] || scales[0];
 
         return (
-            <Div className='scaler'>
-                <Img src={scaleImage} alt={`Scale ${degree}`} className='' />
-            </Div>
+            <div className='scaler'>
+                <img src={scaleImage} alt={`Scale ${degree}`} className='' />
+            </div>
         );
     };
     

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useMachine } from '@xstate/react';
 import { stateMachine, States } from '../StateManager';
-import { Div } from '../Base';
 import { 
     Main, 
     Menu, 
@@ -21,39 +20,39 @@ const App = () => {
 
     if (stateManager.value == States.MAIN) {
         return (
-            <Div>
+            <div>
                 <Main stateManager={stateManager} setState={setState}/>
-            </Div>
+            </div>
         )
     } else if (stateManager.value == States.MENU) {
         return (
-            <Div>
+            <div>
                 <Menu stateManager={stateManager} setState={setState}/>
-            </Div>
+            </div>
         )
     } else if (stateManager.value == States.ABOUT) {
         return (
-            <Div>
+            <div>
                 <About stateManager={stateManager} setState={setState}/>
-            </Div>
+            </div>
         )
     } else if (stateManager.value == States.VERSION) {
         return (
-            <Div>
+            <div>
                 <Version stateManager={stateManager} setState={setState}/>
-            </Div>
+            </div>
         )
     } else if (stateManager.value == States.CONFIGURATIONS) {
         return (
-            <Div>
+            <div>
                 <Configurations stateManager={stateManager} setState={setState}/>
-            </Div>
+            </div>
         )
     } else if (stateManager.value == States.TUNER) {
         return (
-            <Div>
+            <div>
                 <Tuner stateManager={stateManager} setState={setState}/>
-            </Div>
+            </div>
         )
     }
 };

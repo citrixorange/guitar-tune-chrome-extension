@@ -3,7 +3,6 @@ import { Header, Footer } from '../Components';
 import { Title } from '../Components/Texts';
 import { Note } from '../Components/Texts/Note';
 import { Scale } from '../Components/Scale';
-import { Div } from '../Base';
 
 const Tuner = ({ stateManager, setState }) => {
 
@@ -31,13 +30,13 @@ const Tuner = ({ stateManager, setState }) => {
     }, [degree]);
 
     return (
-        <Div className="background">
+        <div className="background">
             <Header icon='hamburguer' stateManager={stateManager} setState={setState}/>
             <Title title='Guitar Tuner'/>
             <Note note='G'/>
             <Scale degree={degree}/>
             <Footer/>
-        </Div>
+        </div>
     );
 };
   

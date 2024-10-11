@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Div, Img } from '../../Base';
 import { Triggers } from '../../StateManager';
 import close from '../../../images/assets/close.png';
 import hovered from '../../../images/assets/hovered-close.png';
@@ -12,12 +11,12 @@ const Close = ({ stateManager, setState }) => {
     }, [isHovered]);
 
     return (
-        <Div
+        <div
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <Img src={isHovered ? hovered : close} onClick={() => setState({type: Triggers.MAIN})}/>
-        </Div>
+            <img src={isHovered ? hovered : close} onClick={() => setState({type: Triggers.MAIN})}/>
+        </div>
     );
 };
   

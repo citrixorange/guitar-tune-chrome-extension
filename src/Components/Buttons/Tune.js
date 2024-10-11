@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Div, Img } from '../../Base';
 import { Triggers } from '../../StateManager';
 import '../../css/TuneButton.css';
 import tune_0 from '../../../images/assets/tune_button/tune_button.png';
@@ -54,8 +53,8 @@ const Tune = ({ stateManager, setState }) => {
 
 
     return (
-        <Div className='tune-button'>
-            <Img 
+        <div className='tune-button'>
+            <img 
                 src={tunes[counter]}
                 
                 onClick={() => {
@@ -76,7 +75,7 @@ const Tune = ({ stateManager, setState }) => {
                     timerUnhoverHandler()
                 }} 
             />
-        </Div>
+        </div>
     );
 
 };
