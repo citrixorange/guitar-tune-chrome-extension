@@ -116,15 +116,22 @@
         ];
 
 
+        if(degree) {
+            let scaleImage = scales[45-degree.degree];
+            return (
+                <div className='scaler'>
+                    <img src={scaleImage} alt={`Scale ${degree.degree}`} className='' />
+                </div>
+            );
+        } else {
+            let scaleImage = scales[45];
+            return (
+                <div className='scaler'>
+                    <img src={scaleImage} alt={`Scale 0`} className='' />
+                </div>
+            );
+        }
 
-        // Ensure the degree is within bounds
-        const scaleImage = scales[degree+45] || scales[0];
-
-        return (
-            <div className='scaler'>
-                <img src={scaleImage} alt={`Scale ${degree}`} className='' />
-            </div>
-        );
     };
     
     export { Scale };

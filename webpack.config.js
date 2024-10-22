@@ -63,7 +63,10 @@ module.exports = (env) => {
             new CopyWebpackPlugin({
                 patterns: [
                   { from: 'manifest.json', to: 'manifest.json' },
-                  { from: 'images', to: 'images'}
+                  { from: 'images', to: 'images'},
+                  { from: 'public/Audio/Worker/index.js', to: 'Audio/Worker/index.js'},
+                  { from: 'public/wasm-audio', to: 'wasm-audio'},
+                  { from: 'public/NOTES_TABLE.json', to: 'NOTES_TABLE.json'}
                 ],
             }),
             new webpack.DefinePlugin(envKeys),

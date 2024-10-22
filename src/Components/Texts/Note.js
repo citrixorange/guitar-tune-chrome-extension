@@ -2,13 +2,23 @@ import React, { useState, useEffect } from 'react';
 import '../../css/Tuner.css';
 
 const Note = ({note}) => {
-    return (
-        <div>
-            <div className='tuner-note'>
-                {note}
+    if(note) {
+        return (
+            <div>
+                <div className='tuner-note'>
+                    {note.note}
+                </div>
             </div>
-        </div>
-    );
+        );
+    } else {
+        return (
+            <div>
+                <div className='tuner-note'>
+                    {''}
+                </div>
+            </div>
+        );
+    }
 };
   
 export { Note };
