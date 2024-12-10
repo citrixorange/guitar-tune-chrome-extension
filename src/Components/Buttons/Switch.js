@@ -3,7 +3,7 @@ import { RightSwitch } from './RightSwitch';
 import { LeftSwitch } from './LeftSwitch';
 import '../../css/Switch.css';
 
-const Switch = ({ description, options }) => {
+const Switch = ({ description, options, setConfig }) => {
 
     const [ idx, setIdx ] = useState(0);
     const [ option, setOption ] = useState(description);
@@ -14,11 +14,11 @@ const Switch = ({ description, options }) => {
 
     return (
         <div className='switch'>
-            <LeftSwitch setOption={setOption} idx={idx} setIdx={setIdx} options={options}/>
+            <LeftSwitch description={description} setOption={setOption} idx={idx} setIdx={setIdx} options={options} setConfig={setConfig}/>
             <button className='switch-display' disabled={true}>
                 {option}
             </button>
-            <RightSwitch setOption={setOption} idx={idx} setIdx={setIdx} options={options}/>
+            <RightSwitch description={description} setOption={setOption} idx={idx} setIdx={setIdx} options={options} setConfig={setConfig}/>
         </div>
     );
 };

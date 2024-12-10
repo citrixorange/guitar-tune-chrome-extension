@@ -3,7 +3,7 @@ import left from '../../../images/assets/left.png';
 import hovered from '../../../images/assets/hovered-left.png';
 import '../../css/Switch.css';
 
-const LeftSwitch = ({setOption, idx, setIdx, options}) => {
+const LeftSwitch = ({description, setOption, idx, setIdx, options, setConfig}) => {
     const [isFirstClick, setFirstClick] = useState(true);
     const [isHovered, setIsHovered] = useState(false);
 
@@ -18,7 +18,11 @@ const LeftSwitch = ({setOption, idx, setIdx, options}) => {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 onClick={() => {
-                    setOption(options[idx])
+                    setOption(`${options[idx]}`)
+                    setConfig(prevConfig => ({
+                        ...prevConfig,
+                        [description]: options[idx]
+                    }))
                     setFirstClick(false)
                 }}
             >   
@@ -34,10 +38,18 @@ const LeftSwitch = ({setOption, idx, setIdx, options}) => {
                 onClick={() => {
                     if(idx == 0) {
                         setIdx(options.length-1)
-                        setOption(options[options.length-1])
+                        setOption(`${options[options.length-1]}`)
+                        setConfig(prevConfig => ({
+                            ...prevConfig,
+                            [description]: options[options.length-1]
+                        }))
                     } else {
                         setIdx(idx-1)
-                        setOption(options[idx-1])
+                        setOption(`${options[idx-1]}`)
+                        setConfig(prevConfig => ({
+                            ...prevConfig,
+                            [description]: options[idx-1]
+                        }))
                     }
                 }}
             >   

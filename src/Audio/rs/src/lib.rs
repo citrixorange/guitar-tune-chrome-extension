@@ -5,6 +5,7 @@ use wasm_bindgen::prelude::*;
 mod tuner;
 mod utils;
 mod config;
+mod filter;
 
 #[wasm_bindgen]
 pub struct WasmPitchDetector {
@@ -27,7 +28,7 @@ impl WasmPitchDetector {
     }
   }
 
-  pub fn detect_pitch(&mut self, audio_samples: Vec<f32>) -> f32 {
+  pub fn detect_pitch(&mut self, audio_samples: Vec<f32>, power_threshold: f32, clarity_threshold: f32) -> f32 {
     if audio_samples.len() < self.fft_size {
       panic!("Insufficient samples passed to detect_pitch(). Expected an array containing {} elements but got {}", self.fft_size, audio_samples.len());
     }
@@ -35,20 +36,20 @@ impl WasmPitchDetector {
     // Include only notes that exceed a power threshold which relates to the
     // amplitude of frequencies in the signal. Use the suggested default
     // value of 5.0 from the library.
-    const POWER_THRESHOLD: f32 = 5.0;
+    //const POWER_THRESHOLD: f32 = 5;
 
     // The clarity measure describes how coherent the sound of a note is. For
     // example, the background sound in a crowded room would typically be would
     // have low clarity and a ringing tuning fork would have high clarity.
     // This threshold is used to accept detect notes that are clear enough
     // (valid values are in the range 0-1).
-    const CLARITY_THRESHOLD: f32 = 0.6;
+    //const CLARITY_THRESHOLD: f32 = 0.7;
 
     let optional_pitch = self.detector.get_pitch(
       &audio_samples,
       self.sample_rate,
-      POWER_THRESHOLD,
-      CLARITY_THRESHOLD,
+      power_threshold,
+      clarity_threshold,
     );
 
     match optional_pitch {

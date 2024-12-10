@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Header, Footer } from '../Components';
+import { Header, Footer, Ads } from '../Components';
 import { Option } from '../Components/Buttons';
 import { Title } from '../Components/Texts';
 import { Triggers } from '../StateManager';
@@ -16,6 +16,7 @@ const Menu = ({ stateManager, setState }) => {
                 <Option description='About' stateManager={stateManager} setState={setState} trigger={Triggers.ABOUT}/>
                 <Option description='Version' stateManager={stateManager} setState={setState} trigger={Triggers.VERSION}/>
             </div>
+            <Ads/>
             <Footer/>
         </div>
     );

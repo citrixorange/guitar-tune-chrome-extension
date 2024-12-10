@@ -28,6 +28,13 @@ class Dispatcher extends AudioWorkletNode {
         });
     }
 
+    setConfig(parameters) {
+        this.port.postMessage({
+            type: "send-wasm-parameters",
+            parameters,
+        });
+    }
+
     // Handle an uncaught exception thrown in the PitchProcessor.
     onprocessorerror(err) {
         console.log(

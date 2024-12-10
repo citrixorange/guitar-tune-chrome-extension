@@ -16,6 +16,24 @@
     white-space: pre-line;
 }
 
+.tuner-freq {
+    font-family: 'Mina';
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 27px;
+    margin-right: 27px;
+    margin-bottom: 40px;
+    text-align: center;
+    white-space: pre-line;
+}
+
 .scaler {
     display: flex;
     flex-direction: row;

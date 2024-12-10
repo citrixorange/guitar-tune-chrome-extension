@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Header, Footer } from '../Components';
+import { Header, Footer, Ads } from '../Components';
 import { Title, Version as VersionText } from '../Components/Texts';
 import '../css/Main.css';
 
@@ -9,6 +9,7 @@ const Version = ({ stateManager, setState }) => {
             <Header icon='back' stateManager={stateManager} setState={setState}/>
             <Title title='Version'/>
             <VersionText/>
+            <Ads/>
             <Footer/>
         </div>
     );

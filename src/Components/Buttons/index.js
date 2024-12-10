@@ -6,6 +6,7 @@ import { LeftSwitch } from './LeftSwitch.js';
 import { RightSwitch } from './RightSwitch.js';
 import { Option } from './Option.js';
 import { Tune } from './Tune.js';
+import { ToggleSwitch } from './ToggleSwitch.js';
 
 export {
     Back,
@@ -15,5 +16,6 @@ export {
     LeftSwitch,
     RightSwitch,
     Option,
-    Tune
+    Tune,
+    ToggleSwitch
 };

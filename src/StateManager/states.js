@@ -4,7 +4,10 @@ const States = {
     CONFIGURATIONS: 'CONFIGURATIONS',
     ABOUT: 'ABOUT',
     VERSION: 'VERSION',
-    TUNER: 'TUNER'
+    TUNER: 'TUNER',
+    EQUALIZER: 'EQUALIZER',
+    DETECTION: 'DETECTION',
+    FREQUENCY: 'FREQUENCY'
 };
 
 const Triggers = {
@@ -13,7 +16,10 @@ const Triggers = {
     CONFIGURATIONS: 'goToConfigurations',
     ABOUT: 'goToAbout',
     VERSION: 'goToVersion',
-    TUNER: 'goToTuner'
+    TUNER: 'goToTuner',
+    EQUALIZER: 'goToEqualizer',
+    DETECTION: 'goToDetection',
+    FREQUENCY: 'goToFrequency'
 }
 
 export {

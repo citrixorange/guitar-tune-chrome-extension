@@ -21,7 +21,10 @@ const stateMachine = createMachine({
         },
         CONFIGURATIONS: {
             on: {
-                goToMenu: States.MENU
+                goToMenu: States.MENU,
+                goToDetection: States.DETECTION,
+                goToEqualizer: States.EQUALIZER,
+                goToFrequency: States.FREQUENCY
             }
         },
         ABOUT: {
@@ -35,6 +38,21 @@ const stateMachine = createMachine({
             }
         },
         TUNER: {
+            on: {
+                goToMenu: States.MENU
+            }
+        },
+        EQUALIZER: {
+            on: {
+                goToMenu: States.MENU
+            }
+        },
+        DETECTION: {
+            on: {
+                goToMenu: States.MENU
+            }
+        },
+        FREQUENCY: {
             on: {
                 goToMenu: States.MENU
             }

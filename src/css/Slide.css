@@ -1,0 +1,58 @@
+/* Slider.css */
+
+.slider-container {
+    font-family: 'Mina';/* Change this to your custom font */
+    font-size: 18px; /* Customize font size */
+    color: #fff;
+  }
+  
+  .slider-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .custom-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #FC84CC, #64578C); /* Gradient color */
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+  }
+  
+  .custom-slider:hover {
+    opacity: 1;
+  }
+  
+  .custom-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #64578C; /* Customize thumb color */
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .custom-slider::-webkit-slider-thumb:hover {
+    background: #FC84CC;
+  }
+  
+  .custom-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #64578C;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .custom-slider::-moz-range-thumb:hover {
+    background: #FC84CC;
+  }
+  
